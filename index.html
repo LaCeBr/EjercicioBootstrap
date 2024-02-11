@@ -12,8 +12,8 @@
     y no aparte de las exigencias, por lo que indicaré cada bloque responsivo que se incluya -->
 <body>
     <!-- Primer bloque responsivo: selección de idioma -->
-    <div class="container-lg border p-5">
-        <div class="row offset-md-7 border">
+    <div class="container-sm border p-7">
+        <div class="row offset-md-8 border">
             <ul class="nav nav-pills">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Español</a>
@@ -104,96 +104,30 @@
             </button>
         </div>
     </div>
-    <!-- Tercer bloque responsivo: texto + imagen 1 -->
-    <div class="container-lg border">
+    <!-- Tercer bloque responsivo: texto + imagen x2 -->
+    <div class="container-sm">
         <div class="row">
-            <div class="col-md-6 border">
-                <h1>h1. Bootstrap heading</h1>
-                <h2>h2. Bootstrap heading</h2>
-                <h3>h3. Bootstrap heading</h3>
-                <h4>h4. Bootstrap heading</h4>
-                <h5>h5. Bootstrap heading</h5>
-                <h6>h6. Bootstrap heading</h6>
-            </div>
-            <div class="col-md-6 border">
-                <form action="/action_page.php">
-                    <div class="mb-3 mt-3">
-                        <label for="email" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="pwd" class="form-label">Password:</label>
-                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
-                    </div>
-                    <div class="form-check mb-3">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" name="remember"> Remember me
-                        </label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
+          <!-- Primer bloque: Texto a la izquierda, imagen a la derecha -->
+          <div class="col-md-6">
+            <h2>Bienvenido a una nueva dimensión de lectura</h2>
+            <p>¡Bienvenido a nuestra plataforma de lectura de libros! Sumérgete en un mundo de historias cautivadoras y aventuras inolvidables. Descubre una amplia variedad de géneros literarios y encuentra tu próxima lectura favorita. Desde clásicos atemporales hasta las últimas novedades, tenemos algo para cada lector ávido de conocimiento y entretenimiento. ¡Explora, disfruta y deja que los libros te transporten a mundos inimaginables!</p>
+          </div>
+          <div class="col-md-6">
+            <img src="imagine.jpg" alt="Imagen 1" class="d-none d-md-block h-100 float-md-left"> <!-- Oculta la imagen en dispositivos medianos y grandes -->
+          </div>
+        </div>
+        <div class="row">
+          <!-- Segundo bloque: Imagen a la izquierda, texto a la derecha -->
+          <div class="col-md-6">
+            <img src="fantasie.jpg" alt="Imagen 2" class="d-block h-100 float-md-right"> 
+          </div>
+          <div class="col-md-6">
+            <h2>Suscríbete ahora y vive la emoción de la lectura anticipada</h2>
+            <p>¡No te pierdas ni una sola historia! Suscríbete a nuestro newsletter y sé el primero en acceder a los libros recién publicados. Por tan solo $2.90 al mes, tendrás acceso exclusivo a las últimas novedades literarias antes que nadie. Únete ahora y descubre un universo de lecturas fascinantes que te atraparán desde la primera página. ¡No esperes más para vivir la emoción de la lectura anticipada!</p>
+          </div>
         </div>
     </div>
-    <!-- Cuarto bloque responsivo: texto + imagen 2 -->
-    <div class="container-lg border">
-        <div class="row">
-            <div class="col-md-6 border">
-                <h1>h1. Bootstrap heading</h1>
-                <h2>h2. Bootstrap heading</h2>
-                <h3>h3. Bootstrap heading</h3>
-                <h4>h4. Bootstrap heading</h4>
-                <h5>h5. Bootstrap heading</h5>
-                <h6>h6. Bootstrap heading</h6>
-            </div>
-            <div class="col-md-6 border">
-                <form action="/action_page.php">
-                    <div class="mb-3 mt-3">
-                        <label for="email" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="pwd" class="form-label">Password:</label>
-                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
-                    </div>
-                    <div class="form-check mb-3">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" name="remember"> Remember me
-                        </label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Email</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+      
     <div class="container-fluid border">
         <div class="row">
             <div class="col-md-4 border"><button type="button" class="btn btn-outline-primary">Primary</button>
