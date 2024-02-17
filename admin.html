@@ -7,40 +7,39 @@
     <title>Bootstrap Administrador</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="container-fluid bg-body-tertiary">
         <div class="row">
             <!-- Columna para el menú -->
             <div class="col-md-2">
-                <div class="d-flex">
-                    <div class="sidebar-container">
-                        <div class="logo">
-                            <img src="imagenes/logo.png" class="img-fluid" alt="..." style="max-width: 185px; height: auto;">
-                        </div>
-                        <div><p></p></div>
-                        <p>Menu</p>
-                        <div class="menu">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            <p></p>
-                            <a class="nav-link" href="#">Libro aleatorio</a>
-                            <p></p>
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Secciones
-                            </a>
-                            <p></p>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Biblioteca</a></li>
-                                <li><a class="dropdown-item" href="#">Recomendaciones</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Suscribirse</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>           
+                <div class="logo">
+                    <img src="imagenes/logo.png" class="img-fluid" alt="..." style="max-width: 100%; height: auto;">
+                </div>
+                <div><p></p></div>
+                <p>Menu</p>
+                <div class="menu">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <p></p>
+                    <a class="nav-link" href="#">Libro aleatorio</a>
+                    <p></p>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Secciones
+                    </a>
+                    <p></p>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Biblioteca</a></li>
+                        <li><a class="dropdown-item" href="#">Recomendaciones</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Suscribirse</a></li>
+                    </ul>
+                </div>          
             </div>
             <!-- Contenido principal de la página -->
             <div class="col-md-9">
@@ -66,6 +65,7 @@
                     <div><p></p></div>
                     <div><p></p></div>
                     <!-- Tabla -->
+                    <!-- Cada celda descripción es un toolpit y la vista previa los modales -->
                     <div class="container-fluid">
                         <table class="table table-hover">
                             <thead>
@@ -129,6 +129,7 @@ Tras fracasar en un primer intento de detener en alta mar las arrolladoras tropa
                                 </tr>
                             </tbody>
                         </table>
+
                         <!-- Modales con vista previa -->
                         <div class="modal fade" id="rayo" role="dialog" aria-hidden="true">
                             <div class="modal-dialog modal-lg" role="document">
@@ -283,32 +284,27 @@ Tras fracasar en un primer intento de detener en alta mar las arrolladoras tropa
                         </div>
                     </div>
                     <div><p></p></div>
+                    <div><p></p></div>
+                    <!-- Popovers -->
+                    <div class="container mt-5">
+                        <h5>Popover Example</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="A futuro" data-bs-content="Esta función no está implementada">Añadir libro</button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="En la tabla" data-bs-content="Los modales saltan con los botones 'ver' dispuestos en la tabla">Ver modales</button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="En la tabla" data-bs-content="Los toolpits aparecen al pasar el cursor sobre las descripciones de la tabla">Ver toolpits</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    
+    </div> 
     <div><p></p></div>
-
-    
-
-
-
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
